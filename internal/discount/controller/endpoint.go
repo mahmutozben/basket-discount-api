@@ -18,6 +18,7 @@ func NewController(service discount.Service) *controller {
 	}
 }
 
+// MakeHandler returns a handler for the discount service.
 func MakeDiscountHandler(instance *echo.Echo, s *controller) {
 	instance.GET("/", func(context echo.Context) error {
 		return context.JSON(http.StatusOK, "Service is up")
@@ -51,5 +52,6 @@ func (receiver *controller) getCampaign(c echo.Context) error {
 		return c.JSON(http.StatusNotFound, nil)
 	}
 	result.Item = *data
+
 	return c.JSON(http.StatusOK, result)
 }

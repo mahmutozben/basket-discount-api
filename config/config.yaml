@@ -4,7 +4,7 @@ RedisSettings:
   Db: 0
 DiscountDbSettings:
   Host: "localhost"
-  DbName: "Campaign"
+  DbName: "DiscountDb"
   Port: "5432"
   User: "postgres"
   Pass: "616161"

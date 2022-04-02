@@ -11,7 +11,6 @@ const docTemplate = `{
         "description": "{{escape .Description}}",
         "title": "{{.Title}}",
         "contact": {
-            "name": "API Support",
             "email": "mahmutozben61@gmail.com"
         },
         "version": "{{.Version}}"

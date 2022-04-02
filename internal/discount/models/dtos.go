@@ -16,7 +16,7 @@ type (
 	}
 
 	CampaignDto struct {
-		CampaignId   int64  `json:"campaignId"`
+		CampaignId   int    `json:"campaignId"`
 		CampaignName string `json:"campaignName"`
 	}
 )

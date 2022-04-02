@@ -14,7 +14,6 @@ definitions:
 info:
   contact:
     email: mahmutozben61@gmail.com
-    name: API Support
   description: Basket-Discount API
   title: Basket-Discount API
   version: "1.0"

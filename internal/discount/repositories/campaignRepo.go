@@ -34,7 +34,7 @@ func (repo *campaignRepository) Update(entity models.Campaign) error {
 
 func (repo *campaignRepository) Get(campaignId int64) (*models.Campaign, error) {
 	var campaign models.Campaign
-	err := repo.db.Table("Campaign").Find(&campaign, campaignId).Error
+	err := repo.db.Table("campaign").Find(&campaign, campaignId).Error
 	if err != nil {
 		return nil, err
 	}
