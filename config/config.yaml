@@ -1,0 +1,10 @@
+RedisSettings:
+  Address: "127.0.0.1:637"
+  Pass: ""
+  Db: 0
+DiscountDbSettings:
+  Host: "localhost"
+  DbName: "Campaign"
+  Port: "5432"
+  User: "postgres"
+  Pass: "616161"

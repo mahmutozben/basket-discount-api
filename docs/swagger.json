@@ -1,0 +1,72 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Basket-Discount API",
+        "title": "Basket-Discount API",
+        "contact": {
+            "name": "API Support",
+            "email": "mahmutozben61@gmail.com"
+        },
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/v1/discount/campaign/{campaignId}": {
+            "get": {
+                "tags": [
+                    "discount"
+                ],
+                "summary": "Get campaign",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "campaignId valid",
+                        "name": "campaignId",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controller.GetCampaignResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controller.GetCampaignResponse": {
+            "type": "object",
+            "properties": {
+                "item": {
+                    "$ref": "#/definitions/models.CampaignDto"
+                }
+            }
+        },
+        "models.CampaignDto": {
+            "type": "object",
+            "properties": {
+                "campaignId": {
+                    "type": "integer"
+                },
+                "campaignName": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
